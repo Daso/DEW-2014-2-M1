@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<table>
+<label>Gifts</label>
+   <tr>
+     <th>Name</th><th>Price</th>
+   </tr>
+  <% @user.gifts.each do |gift| %>
+    <tr>
+      <td><%= gift.name  %>  </td><td><%= gift.price %></td>
+    </tr>  
+  <% end %>
+</table>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
