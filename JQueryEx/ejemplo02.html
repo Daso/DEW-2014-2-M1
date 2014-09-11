@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>Ejemplo JQuery UPC 2 </title>
+  <style>
+    div{
+	  position: absolute;
+	  background-color: red;
+	  left: 40px;
+	  width: 100px;
+	  height:100px;
+	  margin: 8px;	
+	}
+	
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  
+  </script>  
+  
+</head>
+<body>
+	<button id="left"><<</button>
+	<button id="right">>></button>
+    <div class="main"></div>	
+<script>
+$("#right").click(function(){
+  $(".main").animate({"left":"+=50px"},"fast");
+});
+
+$("#left").click(function(){
+  $(".main").animate({"left":"-=50px"},"fast");
+});
+</script>
+	
+	
+</body>
+</html>
