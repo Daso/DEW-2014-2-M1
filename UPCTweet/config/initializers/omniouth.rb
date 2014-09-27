@@ -1,0 +1,1 @@
+provider :twitter, CONSUMER_KEY, CONSUMER_SECRET, {:client_options => {:ssl => {:verify => false}}}

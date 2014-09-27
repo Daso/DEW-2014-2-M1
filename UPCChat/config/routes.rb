@@ -1,18 +1,8 @@
 Rails.application.routes.draw do
-  root :to => "users#index"
-
-  resources :users do
-    member do
-	  get "add_book"
-	end
-  end
-
-  resources :user_books
-
-  resources :books
-
-  resources :authors
-
+  root :to => "messages#index"
+  match "/messages/:from" => "messages#index", via: :get
+  resources :messages
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
