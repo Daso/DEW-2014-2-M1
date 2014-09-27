@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
   def read_message
-  @tweet = Tweet.new
+  @tweet = Tweet.new(tweet_params)
   respond_to do |format|
     format.html # index.html.erb
     format.json { render json: @tweets }
