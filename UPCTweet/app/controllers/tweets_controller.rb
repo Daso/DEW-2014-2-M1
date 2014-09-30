@@ -14,6 +14,7 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.all
     @tweet = Tweet.new
+	puts @tweet.inspect
   end
 
   # GET /tweets/1
